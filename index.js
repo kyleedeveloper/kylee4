@@ -10,7 +10,7 @@ const client = new Client({
 
 module.exports = client;
 
-const token = config.token
+const token = process.env.token
 
 client.on("ready", () => {
   console.log(`Kylee`.green)
@@ -43,4 +43,4 @@ app.get('/', (req, res) => {
 });
 
 
-client.login(token)
+client.login(process.env.token)
